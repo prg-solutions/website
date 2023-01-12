@@ -1,4 +1,6 @@
 $(document).ready(function () {
+  const form = document.getElementById("submit-query-form");
+
   // navigation link click handler
   $(".nav-link").click(function () {
     var sectionTo = $(this).attr("href");
@@ -8,13 +10,13 @@ $(document).ready(function () {
   });
 
   // form submission handler
-  document.getElementById("submit-query-form").addEventListener("submit", sendMail);
+  form.addEventListener("submit", sendMail);
 
   function sendMail(event) {
     event.preventDefault();
 
     //get form data
-    let formData = new FormData(event.target);
+    let formData = new FormData(form);
     let from = formData.get("email");
     let name = formData.get("name");
     let message = formData.get("message");
@@ -27,13 +29,13 @@ $(document).ready(function () {
     }
 
     //fetch call to function
-    fetch('https://us-central1-utils-v1-2023.cloudfunctions.net/sendEmail', {
+    fetch('https://localhost:8080', {
       method: 'POST',
       mode: 'cors',
       body: JSON.stringify(data),
       headers: {
         'Content-Type': 'application/json',
-        'Origin': window.location.origin
+        'Origin': 'D0DBC9C2-945C-4659-8B22-925FE468A5E8'
       }
     })
       .then(response => {
