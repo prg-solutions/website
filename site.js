@@ -29,7 +29,7 @@ $(document).ready(function () {
     }
 
     //fetch call to function
-    fetch('htts://us-central1-utils-v1-2023.cloudfunctions.net/sendEmail', {
+    fetch('https://us-central1-utils-v1-2023.cloudfunctions.net/sendEmail', {
       method: 'POST',
       mode: 'cors',
       body: JSON.stringify(data),
