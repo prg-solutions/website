@@ -29,9 +29,11 @@ $(document).ready(function () {
     //fetch call to function
     fetch('https://us-central1-utils-v1-2023.cloudfunctions.net/sendEmail', {
       method: 'POST',
+      mode: 'cors',
       body: JSON.stringify(data),
       headers: {
-        'Content-Type': 'application/json'
+        'Content-Type': 'application/json',
+        'Origin': window.location.origin
       }
     })
       .then(response => {
