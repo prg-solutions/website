@@ -39,9 +39,9 @@ $(document).ready(function () {
 
     //create a body object
     let data = {
-      to: 'enquiries@prgsolutions.co.uk',
-      subject: 'Enquiry from website',
-      message: `From: ${name}, Email: ${from}, Message: ${message}`
+      name: name,
+      from: from,
+      message: message
     }
 
     let url = (window.location.origin === "http://localhost:8000" ? "http://localhost:8080" : "https://us-central1-utils-v1-2023.cloudfunctions.net/sendEmail");

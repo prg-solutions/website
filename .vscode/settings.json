@@ -6,8 +6,8 @@
     "terminal.background": "#282C34",
     "terminal.foreground": "#EEFFFF",
     "editor.foldBackground": "#282C34",
-    "activityBar.background": "#521243",
-    "titleBar.activeBackground": "#73195E",
-    "titleBar.activeForeground": "#FDF8FC"
+    "activityBar.background": "#2D3005",
+    "titleBar.activeBackground": "#3F4307",
+    "titleBar.activeForeground": "#FAFCE2"
   }
 }
