@@ -36,6 +36,19 @@
 .background-red {
   background-color: #bf404c;
 }
+
 .border-none {
+  border: none;
+}
+
+.button-container {
+  text-align: center;
+}
+
+#submit {
+  width: 150px;
+  margin: 0 auto;
+  margin-top: 20px;
+  background-color: #bf404c;
   border: none;
 }
